@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VGrowCrop – Silage, Coconut, Coconut Oil, Export &amp; Events</title>
+<style>
+:root{--bg:#ffffff;--soft:#f0f7ee;--card:#ffffff;--text:#16301f;--muted:#4d6455;--blue:#1d3fa8;--green:#2e9e3f;--lime:#8bc34a;--line:#dbe8d8;--red:#c62828;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a14;--soft:#14241a;--card:#172a1e;--text:#e8f3e8;--muted:#a3b9a8;--blue:#7da0ff;--green:#5fd070;--line:#264030;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1a14;--soft:#14241a;--card:#172a1e;--text:#e8f3e8;--muted:#a3b9a8;--blue:#7da0ff;--green:#5fd070;--line:#264030;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1050px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:20}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 18px;max-width:1050px;margin:0 auto}
+.logo{font-weight:800;font-size:1.35rem;color:var(--blue)}
+.logo span{color:var(--green)}
+nav{display:flex;gap:16px;font-size:.92rem;font-weight:600;overflow-x:auto}
+nav a{white-space:nowrap;color:var(--muted)}
+nav a:hover{color:var(--green)}
+.btn{display:inline-block;padding:11px 20px;border-radius:999px;font-weight:700;background:var(--green);color:#fff;border:0;cursor:pointer;font-size:1rem}
+.btn.alt{background:transparent;color:var(--blue);border:2px solid var(--blue)}
+.hero{background:linear-gradient(160deg,#e3f3dc 0%,#cfe8f7 100%);padding:54px 0 46px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:linear-gradient(160deg,#17301f,#14263a)}}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.1;margin:0 0 12px;color:var(--blue)}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero p{max-width:620px;color:var(--muted);font-size:1.08rem}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:.85rem;font-weight:600}
+section{padding:46px 0}
+section.soft{background:var(--soft)}
+h2{font-size:1.7rem;margin:0 0 6px;color:var(--blue)}
+.sub{color:var(--muted);margin:0 0 24px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card .ic{font-size:2rem}
+.card h3{margin:8px 0 6px;font-size:1.15rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.price{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.price div{border-radius:14px;padding:8px 14px;color:#fff;font-weight:800}
+.price .a{background:var(--blue)}.price .b{background:var(--red)}
+.price small{display:block;font-weight:600;font-size:.72rem;opacity:.9}
+ul.ck{list-style:none;padding:0;margin:10px 0 0}
+ul.ck li{padding-left:24px;position:relative;margin:5px 0;font-size:.95rem}
+ul.ck li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+.stats{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));text-align:center}
+.stats div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.stats b{display:block;font-size:1.25rem;color:var(--green)}
+form{display:grid;gap:10px;max-width:520px}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+.contact{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+footer{background:#14307f;color:#fff;padding:28px 0;text-align:center;font-size:.92rem}
+footer small{opacity:.8}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25d366;color:#fff;font-weight:800;padding:13px 18px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:25}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<a class="logo" href="#top">🌿 V<span>Grow</span>Crop</a>
+<nav><a href="#about">About</a><a href="#products">Products</a><a href="#events">Events</a><a href="#trade">Export &amp; Import</a><a href="#contact">Contact</a></nav>
+</div></header>
 
+<main id="top">
+<div class="hero"><div class="wrap">
+<h1>Organic Products, <em>Grown &amp; Supplied</em> with Care</h1>
+<p>VGrowCrop is a manufacturing and supplying company from Coimbatore – offering silage cattle feed, coconut, coconut oil, event &amp; function supplies, and export–import services.</p>
+<div class="cta"><a class="btn" href="#contact">Get a Quote</a><a class="btn alt" href="tel:+917845028405">📞 78450 28405</a></div>
+<div class="tags"><span>🌱 Organic Focus</span><span>🚚 Delivery Available</span><span>📦 Regular Supply</span><span>🌍 Export &amp; Import</span></div>
+</div></div>
+
+<section id="about"><div class="wrap">
+<h2>About VGrowCrop</h2>
+<p class="sub">Better Feed • Healthier Livestock • Prosperous Farmers</p>
+<div class="stats">
+<div><b>Manufacturer</b>&amp; Supplier</div><div><b>Organic</b>Quality products</div><div><b>Coimbatore</b>Main Branch – Nilambur</div><div><b>Regular</b>Supply on time</div>
+</div>
+</div></section>
+
+<section id="products" class="soft"><div class="wrap">
+<h2>Our Products</h2>
+<p class="sub">Farm-fresh, organic and dependable – in bulk or small orders.</p>
+<div class="grid">
+<div class="card"><div class="ic">🐄</div><h3>Silage (Cattle Feed)</h3><p>Fully formulated feed for better growth and more milk.</p>
+<ul class="ck"><li>More milk yield &amp; quality</li><li>Better digestion &amp; immunity</li><li>Reduces feeding cost</li></ul>
+</div>
+<div class="card"><div class="ic">🥥</div><h3>Coconut</h3><p>Fresh, quality coconuts for homes, shops, hotels, temples and events. Bulk supply available.</p></div>
+<div class="card"><div class="ic">🫙</div><h3>Coconut Oil</h3><p>Pure, organic coconut oil for cooking, hair and skin care. Retail and wholesale.</p></div>
+</div>
+<p class="sub" style="margin-top:16px">Call us for current pricing. Delivery with vehicle charges only.</p>
+</div></section>
+
+<section id="events"><div class="wrap">
+<h2>Marriage Events &amp; Functions</h2>
+<p class="sub">We supply for your special occasions.</p>
+<div class="grid">
+<div class="card"><div class="ic">💍</div><h3>Weddings</h3><p>Coconuts and organic items for marriage ceremonies and receptions.</p></div>
+<div class="card"><div class="ic">🎉</div><h3>Functions</h3><p>Housewarming, temple festivals, birthdays and family functions.</p></div>
+<div class="card"><div class="ic">🚚</div><h3>On-time Delivery</h3><p>Bulk orders delivered to your venue as per your schedule.</p></div>
+</div>
+</div></section>
+
+<section id="trade" class="soft"><div class="wrap">
+<h2>Export &amp; Import</h2>
+<p class="sub">Connecting Indian farm produce with the world.</p>
+<div class="grid">
+<div class="card"><div class="ic">🌍</div><h3>Export</h3><p>Coconut, coconut oil and organic agri products to international buyers.</p></div>
+<div class="card"><div class="ic">📥</div><h3>Import</h3><p>Sourcing agri-related products and inputs for Indian businesses.</p></div>
+<div class="card"><div class="ic">🤝</div><h3>Bulk Partnerships</h3><p>Long-term supply for distributors, traders and manufacturers.</p></div>
+</div>
+</div></section>
+
+<section id="why"><div class="wrap">
+<h2>Why Choose Us</h2>
+<div class="grid">
+<div class="card"><h3>🌱 Organic Focus</h3><p>Natural, sustainable farming and processing.</p></div>
+<div class="card"><h3>💰 Fair Pricing</h3><p>Clear rates with no hidden charges.</p></div>
+<div class="card"><h3>📦 Regular Supply</h3><p>Steady availability all year round.</p></div>
+<div class="card"><h3>🚚 Doorstep Delivery</h3><p>Vehicle charges only.</p></div>
+</div>
+</div></section>
+
+<section id="contact" class="soft"><div class="wrap">
+<h2>Contact Us</h2>
+<p class="sub">Send an enquiry – it opens in WhatsApp.</p>
+<div class="contact">
+<form id="f">
+<input id="n" placeholder="Your name" required>
+<input id="p" placeholder="Phone number" inputmode="tel">
+<select id="s"><option>Silage</option><option>Coconut</option><option>Coconut Oil</option><option>Marriage / Function Supply</option><option>Export / Import</option></select>
+<textarea id="m" rows="3" placeholder="Quantity and details"></textarea>
+<button class="btn" type="submit">Send on WhatsApp</button>
+</form>
+<div class="card">
+<h3>📍 Main Branch</h3><p>Coimbatore – Nilambur</p><h3>📍 Branch</h3><p>Pollachi – Negamam – V. Velur</p>
+<h3>📞 Call</h3><p><a href="tel:+917845028405">78450 28405</a></p>
+<p style="margin-top:12px"><a class="btn alt" href="https://www.google.com/maps?q=10.768738,77.166031" target="_blank" rel="noopener">Pollachi branch on Maps</a></p>
+</div>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><b>🌿 VGrowCrop™</b><br><small>Better Feed • Healthier Livestock • Prosperous Farmers</small><br>Main Branch: Coimbatore – Nilambur · Branch: Pollachi, Negamam, V. Velur<br>📞 7845028405<br><small>Let’s Grow Together for a Healthier Dairy Farm</small></div></footer>
+<a class="fab" href="https://wa.me/917845028405" target="_blank" rel="noopener">💬 WhatsApp</a>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();
+var t='Hello VGrowCrop, I am '+document.getElementById('n').value+' ('+document.getElementById('p').value+'). Enquiry: '+document.getElementById('s').value+'. '+document.getElementById('m').value;
+window.open('https://wa.me/917845028405?text='+encodeURIComponent(t),'_blank');
+});
+</script>
+</body>
+</html>
